@@ -28,4 +28,5 @@ addCart.addEventListener("click", () => {
   counter.addItem("");
 
   //update the DOM with the new count
+  currentCount.textContent = counter.getAllCounts()["20L water bottle"];
 });
