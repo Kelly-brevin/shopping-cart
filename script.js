@@ -20,3 +20,6 @@ class CartCounter {
     return this.counts;
   }
 }
+
+// create the counter
+const counter = new CartCounter();
