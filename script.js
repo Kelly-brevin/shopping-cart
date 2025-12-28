@@ -1,7 +1,3 @@
-//OOP TO HANDLE BUTTON CLICKS
-//user clicks add to cart. Intitial count of one is pushed to an empty products array containing product data
-//quantity button appears to
-
 //class to handle the cart count
 class CartCounter {
   constructor() {
@@ -20,6 +16,16 @@ class CartCounter {
     return this.counts;
   }
 }
-
-// create the counter
 const counter = new CartCounter();
+
+//Grab DOM elements
+const addCart = document.getElementById("addCart");
+const currentCount = document.getElementById("cartCount");
+
+//event listener
+addCart.addEventListener("click", () => {
+  //add a specific item
+  counter.addItem("");
+
+  //update the DOM with the new count
+});

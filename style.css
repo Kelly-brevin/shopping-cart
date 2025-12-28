@@ -22,7 +22,7 @@ body {
 .card {
   text-align: center;
 }
-#add-cart {
+#addCart {
   padding: 15px;
   border: none;
   background-color: #28a745;
@@ -36,7 +36,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: 20px;
 }
-#search-box {
+button {
+  cursor: pointer;
 }
