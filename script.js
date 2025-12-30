@@ -34,3 +34,4 @@ addCart.addEventListener("click", () => {
 
 //textContent returns all the text exactly as it appears in the DOM(including hidden text and spacing)
 //.innerText returns only the rendered text that is visible to the user, respecting CSS styling
+//?? nullish coalescing checks for null or undefined
