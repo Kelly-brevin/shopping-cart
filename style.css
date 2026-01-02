@@ -41,3 +41,6 @@ body {
 button {
   cursor: pointer;
 }
+#cartCount {
+  cursor: pointer;
+}
