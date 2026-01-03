@@ -43,4 +43,7 @@ document.getElementById("cartCount").addEventListener("click", (e) => {
   window.location.href = "cart.html";
 });
 
-//display cart count on the cart page
+//DISPLAY COUNT ON CART AND CHECKOUT PAGE
+
+//Grab the element to display the count
+document.getElementById("count").innerText = ` ${counter.getAllCounts()}`;
