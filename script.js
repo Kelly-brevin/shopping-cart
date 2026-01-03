@@ -46,4 +46,4 @@ document.getElementById("cartCount").addEventListener("click", (e) => {
 //DISPLAY COUNT ON CART AND CHECKOUT PAGE
 
 //Grab the element to display the count
-document.getElementById("count").innerText = ` ${counter.getAllCounts()}`;
+// document.getElementById("count").innerText = ` ${counter.getAllCounts()}`;
