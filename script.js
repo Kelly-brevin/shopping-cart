@@ -42,3 +42,5 @@ document.getElementById("cartCount").addEventListener("click", (e) => {
   e.preventDefault();
   window.location.href = "cart.html";
 });
+
+//display cart count on the cart page
