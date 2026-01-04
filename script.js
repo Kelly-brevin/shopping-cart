@@ -72,3 +72,7 @@ class Cart {
 const cart = new Cart();
 
 //setup the add and subtract buttons on the cart page
+document.getElementById("add")?.addEventListener("click", () => cart.add());
+document
+  .getElementById("subtract")
+  ?.addEventListener("click", () => cart.subtract());
