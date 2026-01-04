@@ -32,11 +32,6 @@ addCart.addEventListener("click", () => {
   currentCount.innerText = `cart:${counter.getAllCounts()}`;
 });
 
-//textContent returns all the text exactly as it appears in the DOM(including hidden text and spacing)
-//.innerText returns only the rendered text that is visible to the user, respecting CSS styling
-//?? nullish coalescing checks for null or undefined
-//Object is a built in global constructor
-
 //logic to swich to the cart page
 document.getElementById("cartCount").addEventListener("click", (e) => {
   e.preventDefault();
@@ -76,3 +71,8 @@ document.getElementById("add")?.addEventListener("click", () => cart.add());
 document
   .getElementById("subtract")
   ?.addEventListener("click", () => cart.subtract());
+
+//textContent returns all the text exactly as it appears in the DOM(including hidden text and spacing)
+//.innerText returns only the rendered text that is visible to the user, respecting CSS styling
+//?? nullish coalescing checks for null or undefined
+//Object is a built in global constructor
