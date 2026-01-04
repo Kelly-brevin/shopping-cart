@@ -1,5 +1,5 @@
 //class to handle the cart count
-class CartCounter {
+/*class CartCounter {
   constructor() {
     this.counts = {};
   }
@@ -31,7 +31,7 @@ addCart.addEventListener("click", () => {
   //update the DOM with the new count
   currentCount.innerText = `cart:${counter.getAllCounts()}`;
 });
-
+*/
 //logic to swich to the cart page
 document.getElementById("cartCount").addEventListener("click", (e) => {
   e.preventDefault();
