@@ -50,4 +50,25 @@ class Cart {
     this.count = pareseInt(localStorage.getItem("cartCount")) || 0;
     this.updateUI();
   }
+  add() {
+    this.count++;
+    this.save();
+  }
+  subtract() {
+    if (this.count > 0) {
+      this.count--;
+      this.save();
+    }
+  }
+  save() {
+    localStorage.setItem("cartCount", this.count);
+    this.updateUI();
+  }
+  updateUI() {
+    const countEl = document.getElementById("count");
+    if (countEl) countEl.textContent = this.count;
+  }
 }
+const cart = new Cart();
+
+//setup the add and subtract buttons on the cart page
