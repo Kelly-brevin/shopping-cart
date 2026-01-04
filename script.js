@@ -42,7 +42,7 @@ document.getElementById("cartCount").addEventListener("click", (e) => {
 
 class Cart {
   constructor() {
-    this.count = pareseInt(localStorage.getItem("cartCount")) || 0;
+    this.count = parseInt(localStorage.getItem("cartCount")) || 0;
     this.updateUI();
   }
   add() {
