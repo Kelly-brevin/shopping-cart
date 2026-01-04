@@ -43,7 +43,11 @@ document.getElementById("cartCount").addEventListener("click", (e) => {
   window.location.href = "cart.html";
 });
 
-//DISPLAY COUNT ON CART AND CHECKOUT PAGE
+//DISPLAY COUNT ON CART AND CHECKOUT PAGE . PRACTICE LOCAL STORAGE
 
-//Grab the element to display the count
-// document.getElementById("count").innerText = ` ${counter.getAllCounts()}`;
+class Cart {
+  constructor() {
+    this.count = pareseInt(localStorage.getItem("cartCount")) || 0;
+    this.updateUI();
+  }
+}
