@@ -60,8 +60,8 @@ class Cart {
     this.updateUI();
   }
   updateUI() {
-    const countEl = document.getElementById("count");
-    if (countEl) countEl.textContent = this.count;
+    const countEl = document.querySelectorAll("[data-cart-count]");
+    countEl.forEach((el) => (el.textContent = this.count));
   }
 }
 const cart = new Cart();
@@ -71,7 +71,7 @@ document.getElementById("add")?.addEventListener("click", () => cart.add());
 document
   .getElementById("subtract")
   ?.addEventListener("click", () => cart.subtract());
-
+document.getElementById("addCart")?.addEventListener("click", () => cart.add());
 //textContent returns all the text exactly as it appears in the DOM(including hidden text and spacing)
 //.innerText returns only the rendered text that is visible to the user, respecting CSS styling
 //?? nullish coalescing checks for null or undefined
