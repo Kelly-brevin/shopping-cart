@@ -1,8 +1,8 @@
-//logic to swich to the cart page
-/*document.getElementById("cartCount").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.href = "cart.html";
-});*/
+//product catalogue
+const PRODUCTS = {
+  water_10L: { name: "10L water", price: 200 },
+  water_20L: { name: "20L water", price: 350 },
+};
 
 //DISPLAY COUNT ON CART AND CHECKOUT PAGE . PRACTICE LOCAL STORAGE
 
@@ -45,6 +45,7 @@ document.getElementById("addCart")?.addEventListener("click", () => cart.add());
 document
   .getElementById("cartPage")
   ?.addEventListener("click", () => cart.checkOut());
+
 //textContent returns all the text exactly as it appears in the DOM(including hidden text and spacing)
 //.innerText returns only the rendered text that is visible to the user, respecting CSS styling
 //?? nullish coalescing checks for null or undefined
