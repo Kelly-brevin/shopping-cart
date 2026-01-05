@@ -12,7 +12,7 @@ class Cart {
     this.updateUI();
   }
   add() {
-    this.count++;
+    this.count
     this.save();
   }
   subtract() {
