@@ -36,3 +36,24 @@ body {
   color: #333;
   font-weight: 500;
 }
+.cart-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+button {
+  background-color: green;
+  border: none;
+  width: 3rem;
+
+  color: white;
+  cursor: pointer;
+}
+#checkOut {
+  margin-top: 35px;
+  width: 20rem;
+  padding: 15px 20px;
+}
+button:hover {
+  color: #32cd32;
+}
