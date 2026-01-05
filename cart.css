@@ -23,6 +23,16 @@ body {
 }
 .header {
   display: flex;
-  padding: 10px;
+  align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
+}
+.links {
+  display: flex;
+  gap: 40px;
+}
+.links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
