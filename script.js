@@ -65,5 +65,21 @@ class Cart {
 
   subtract(productId) {
     if (!this.items[productId]) return;
+    this.items[productId]--;
+
+    if (this.items[productId] === 0) {
+      delete this.items[productId];
+    }
+    this.save();
+  }
+  getTotalCount() {
+    //Object.values(obj) takes an object and returns an array of its property values
+    return Object.values(this.items).reduce((sum, qty) => sum + qty, 0);
+  }
+  getTotalCost() {
+    return Object.entries(this.items).reduce(
+      (total, [productId, qty]) => total + PRODUCTS[productId].price * qty,
+      0
+    );
   }
 }
