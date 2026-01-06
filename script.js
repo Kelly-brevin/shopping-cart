@@ -1,5 +1,5 @@
 //product catalogue
-const PRODUCTS = {
+/*const PRODUCTS = {
   water_10L: { name: "10L water", price: 200 },
   water_20L: { name: "20L water", price: 350 },
 };
@@ -11,8 +11,8 @@ class Cart {
     this.count = parseInt(localStorage.getItem("cartCount")) || 0;
     this.updateUI();
   }
-  add() {
-    this.count
+  add(productId) {
+    this.count++;
     this.save();
   }
   subtract() {
@@ -21,6 +21,7 @@ class Cart {
       this.save();
     }
   }
+
   save() {
     localStorage.setItem("cartCount", this.count);
     this.updateUI();
@@ -44,9 +45,25 @@ document
 document.getElementById("addCart")?.addEventListener("click", () => cart.add());
 document
   .getElementById("cartPage")
-  ?.addEventListener("click", () => cart.checkOut());
+  ?.addEventListener("click", () => cart.checkOut());*/
 
 //textContent returns all the text exactly as it appears in the DOM(including hidden text and spacing)
 //.innerText returns only the rendered text that is visible to the user, respecting CSS styling
 //?? nullish coalescing checks for null or undefined
 //Object is a built in global constructor
+
+class Cart {
+  constructor() {
+    this.items = JSON.parse(localStorage.getItem("cartItems") || {});
+    this.updateUI();
+  }
+
+  add(productId) {
+    this.items[productId] = (this.items[productId] ?? 0) + 1;
+    this.save();
+  }
+
+  subtract(productId) {
+    if (!this.items[productId]) return;
+  }
+}
