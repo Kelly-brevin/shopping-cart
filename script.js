@@ -52,6 +52,11 @@ document
 //?? nullish coalescing checks for null or undefined
 //Object is a built in global constructor
 
+const PRODUCTS = {
+  water_10L: { name: "10L water", price: 200 },
+  water_20L: { name: "20L water", price: 350 },
+};
+
 class Cart {
   constructor() {
     this.items = JSON.parse(localStorage.getItem("cartItems") || {});
@@ -81,5 +86,16 @@ class Cart {
       (total, [productId, qty]) => total + PRODUCTS[productId].price * qty,
       0
     );
+  }
+  save() {
+    localStorage.setItem("cartItems", JSON.stringify(this.items));
+    this.updateUI();
+  }
+  updateUI() {
+    //update cart count everywhere
+    const count = this.getTotalCount();
+    document
+      .querySelectorAll("[data-cart-count]")
+      .forEach((el) => (el.textContent = count));
   }
 }
