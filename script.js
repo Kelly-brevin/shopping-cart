@@ -69,6 +69,7 @@ class Cart {
   }
 
   subtract(productId) {
+    //guard close pattern: prevents invalid operations
     if (!this.items[productId]) return;
     this.items[productId]--;
 
@@ -97,5 +98,19 @@ class Cart {
     document
       .querySelectorAll("[data-cart-count]")
       .forEach((el) => (el.textContent = count));
+
+    //update total price if element exists
+    const totalEl = document.getElementById("cart-total");
+    if (totalEl) {
+      totalEl.textContent = `KES ${this.getTotalCost()}`;
+    }
+  }
+
+  //switch to check-out page
+  checkOut() {
+    window.location.href = "cart.html";
   }
 }
+
+//Initialize the class
+const cart = new Cart();
