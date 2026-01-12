@@ -73,7 +73,7 @@ document
   ?.addEventListener("click", () => cart.add("water_20L"));
 
 document
-  .getElementById("cartPage")
+  .getElementById("cartIcon")
   ?.addEventListener("click", () => cart.checkOut());
 
 document.getElementById("add")?.addEventListener("click", () => {
