@@ -10,7 +10,7 @@ const PRODUCTS = {
 
 class Cart {
   constructor() {
-    this.items = JSON.parse(localStorage.getItem("cartItems") || {});
+    this.items = JSON.parse(localStorage.getItem("cartItems")) || {};
     this.updateUI();
   }
 
@@ -69,11 +69,7 @@ const cart = new Cart();
 
 //WIRE UP THE BUTTONS
 document
-  .getElementById("add10L")
-  ?.addEventListener("click", () => cart.add("water_10L"));
-
-document
-  .getElementById(add20L)
+  .getElementById("addCart")
   ?.addEventListener("click", () => cart.add("water_20L"));
 
 document

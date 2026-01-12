@@ -28,7 +28,7 @@ body {
   color: white;
   cursor: pointer;
 }
-#add-cart:hover {
+#addCart:hover {
   background-color: #34d058;
 }
 .header {
