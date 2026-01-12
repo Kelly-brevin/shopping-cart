@@ -75,3 +75,11 @@ document
 document
   .getElementById("cartPage")
   ?.addEventListener("click", () => cart.checkOut());
+
+document.getElementById("add")?.addEventListener("click", () => {
+  cart.add("water_20L");
+});
+
+document.getElementById("subtract")?.addEventListener("click", () => {
+  cart.subtract("water_20L");
+});
